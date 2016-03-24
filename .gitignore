@@ -16,6 +16,6 @@ coverage
 *.xml
 node_modules,
 iron.json,
-strong-resources/node_modules,
+strong-resource/node_modules
 client
 *.yml

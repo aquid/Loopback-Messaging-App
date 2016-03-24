@@ -5,6 +5,7 @@
   "main": "server/server.js",
   "dependencies": {
     "async": "~0.9.0",
+    "cfenv": "^1.0.3",
     "compression": "^1.0.3",
     "cors": "^2.7.1",
     "errorhandler": "^1.1.1",
@@ -44,6 +45,6 @@
     "test": "mocha -R spec server/test",
     "pretest": "jshint .",
     "postinstall": "cd strong-resources && npm install",
-    "start": "node ."
+    "start": "node server/server.js"
   }
 }

@@ -18,7 +18,7 @@ app.use(function setCurrentUser(req, res, next) {
       return next(new Error('No user with this access token was found.'));
     }
     var loopbackContext = loopback.getCurrentContext();
-    var loopbackServerUrl = app.get('url').replace(/\/$/, '');
+    var loopbackServerUrl = 'http://message-app.mybluemix.net';
     if (loopbackContext) {
       loopbackContext.set('currentUser', user);
     }
@@ -34,7 +34,12 @@ boot(app, __dirname);
 
 app.start = function() {
   // start the web server
-  return app.listen(process.env.PORT || 3000, function() {
+  console.log(process.env.HOST);
+  var host = process.env.VCAP_APP_HOST || '0.0.0.0';
+  var port = process.env.VCAP_APP_PORT || '3000';
+  app.set('host', host);
+  app.set('port', port);
+  return app.listen(port, function() {
     app.emit('started');
     var baseUrl = app.get('url').replace(/\/$/, '');
     console.log('Web server listening at: %s', baseUrl);

@@ -1,4 +1,4 @@
 {
-  "project_id": "XXXXXXXXXXXXXXX",
-  "token": "XXXXXXXXXXXXXXXX"
+  "project_id": "XXXXXXXXXXXXXXXXXXX", // Enter you iron worker project id
+  "token": "XXXXXXXXXXXXXXXXXXXXX" // iron worker token
 }
