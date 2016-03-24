@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sleep 2
+node node_modules/strong-start/bin/sl-start.js ./
+sleep 2 
+node strong-resources/app.js

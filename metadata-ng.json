@@ -1,0 +1,68 @@
+{
+	"name" : "LoopBack Starter",
+	"services" : [],
+	"type" : "web",
+	"version" : "1.0",
+	"defaultMemory": 1024,
+	"description" : "This is a sample StrongLoop LoopBack Node.js application, powered by the open source LoopBack framework used to compose APIs.",
+  "extra": {
+    "i18n": {
+        "de": {
+            "name": "LoopBack Starter",
+            "description": "Hierbei handelt es sich um eine beispielhafte StrongLoop LoopBack Node.js-Anwendung, die das zur Erstellung von APIs genutzte Open-Source-Framework LoopBack verwendet."
+        },
+        "es": {
+            "name": "LoopBack Starter",
+            "description": "Es una aplicación Node.js de StrongLoop LoopBack de ejemplo, basada en la infraestructura de código abierto LoopBack utilizada para crear las API."
+        },
+        "fr": {
+            "name": "LoopBack Starter",
+            "description": "Exemple d'application Node.js StrongLoop LoopBack, optimisé par l'infrastructure LoopBack open source utilisée pour composer des API. "
+        },
+        "it": {
+            "name": "LoopBack Starter",
+            "description": "Si tratta di un'applicazione Node.js StrongLoop LoopBack di esempio, fornita dal framework open source LoopBack per comporre API."
+        },
+        "ja": {
+            "name": "LoopBack Starter",
+            "description": "これは、API を構成するために使用されるオープン・ソース LoopBack フレームワークに基づくサンプル StrongLoop LoopBack Node.js アプリケーションです。"
+        },
+        "pt-BR": {
+            "name": "Iniciador do LoopBack",
+            "description": "Este é um aplicativo de amostra do StrongLoop LoopBack Node.js, desenvolvido com a estrutura LoopBack de software livre usada para editar APIs."
+        },
+        "zh-Hans": {
+            "name": "LoopBack Starter",
+            "description": "这是一个基于开放式源代码 LoopBack 框架（用于编写 API）的样本 StrongLoop LoopBack Node.js 应用程序。"
+        },
+        "zh-Hant": {
+            "name": "LoopBack 入門範本",
+            "description": "這是範例 StrongLoop LoopBack Node.js 應用程式，它採用開放原始碼 LoopBack 架構來編寫 API。"
+        },
+        "ko": {
+            "name": "LoopBack Starter",
+            "description": "API를 작성하는 데 사용된 오픈 소스 LoopBack 프레임워크를 이용한 샘플 StrongLoop LoopBack Node.js 애플리케이션입니다. "
+        }
+    }
+  },
+	"smallIcon" : "powered-by-LB-xs.png",
+	"icon" : "powered-by-LB-xs.png",
+	"largeIcon" : "powered-by-LB-xs.png",
+	"featuredIcon" : "powered-by-LB-xs.png",
+	"system_tags": ["ibm_created"],
+    "categories": ["boilerplate"],
+	"runtime_template_id": "nodejsHelloWorld", 
+	"runtime": {
+        "name": "SDK for Node.js™"
+    },
+	"metadata" : {
+		"termsUrl" : "https://www.ibm.com/software/sla/sladb.nsf/sla/bm-6626-01"
+	},
+	"source" : {
+		"scmType" : "git",
+		"url" : "https://github.com/strongloop-bluemix/boilerplates.git",
+		"appPath" : "loopbackStarter"
+	},
+	"docURL": "/#starters/LoopBack/index.html"
+
+}

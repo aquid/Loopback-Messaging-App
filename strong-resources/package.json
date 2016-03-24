@@ -1,0 +1,15 @@
+{
+  "name": "strong-proxy",
+  "version": "1.0.0",
+  "description": "Proxy to serve both PM and application on a single port",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ."
+  },
+  "author": "Sai Vennam",
+  "license": "ISC",
+  "dependencies": {
+    "http-proxy": "^1.11.1"
+  }
+}

@@ -1,0 +1,1 @@
+web: ./strong-resources/startup

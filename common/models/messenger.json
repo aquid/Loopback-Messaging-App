@@ -1,0 +1,46 @@
+{
+  "name": "Messenger",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "createdAt": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "sentMessages": {
+      "type": "hasMany",
+      "model": "Message",
+      "foreignKey": "senderId"
+    },
+    "recievedMessages": {
+      "type": "hasMany",
+      "model": "Message",
+      "foreignKey": "recieverId"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}
