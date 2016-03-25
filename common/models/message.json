@@ -23,15 +23,15 @@
   },
   "validations": [],
   "relations": {
-    "sender": {
-      "type": "belongsTo",
-      "model": "Messenger",
-      "foreignKey": "senderId"
-    },
     "reciever": {
       "type": "belongsTo",
       "model": "Messenger",
       "foreignKey": "recieverId"
+    },
+    "sender": {
+      "type": "belongsTo",
+      "model": "Messenger",
+      "foreignKey": "senderId"
     }
   },
   "acls": [
@@ -55,11 +55,10 @@
       "property": "sendMessage"
     },
     {
-      "accessType": "EXECUTE",
+      "accessType": "*",
       "principalType": "ROLE",
       "principalId": "$owner",
-      "permission": "ALLOW",
-      "property": "find"
+      "permission": "ALLOW"
     },
     {
       "accessType": "EXECUTE",
@@ -67,6 +66,13 @@
       "principalId": "$authenticated",
       "permission": "ALLOW",
       "property": "create"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "recievedByUser"
     }
   ],
   "methods": {}

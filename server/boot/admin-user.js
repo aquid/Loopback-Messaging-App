@@ -2,7 +2,6 @@
 	'use strict';
 	module.exports = function(app){
 		if (app.dataSources.db.name !== 'Memory') return;
-
 		
 		var Messenger = app.models.Messenger;
 		var Role = app.models.Role;

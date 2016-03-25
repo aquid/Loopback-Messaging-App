@@ -45,6 +45,9 @@
 				callback(null,'Message sent for processing....');
 			});
 		};
+
+		
+
 		Message.remoteMethod(
 			'sendMessage', 
 			{
@@ -92,5 +95,56 @@
 				}
 			}
 		});
+
+		/*
+			Function to get all the recieved message fron another users.
+
+			Args passed to iron wroker are 
+			{
+				page : message for particular page, (optional)
+				read : get only read messages,(optional)
+				sender : get messages fromm particular user,(optional)
+			}
+		*/
+		Message.recievedByUser = function(page,read,sender,callback){
+			/*
+				Initiate a empty filter object. 
+			*/
+			var filter = {};
+			/*
+				Get current context to fetch the cuser user data. 
+			*/
+			var ctx = loopback.getCurrentContext();
+
+			filter.limit = 10; // set a per page limit (hardcoder as of now, should be a constant number every where)
+			filter.skip = ((page) ? (parseInt(page)-1)*10 : 0 ); // check the page if present or set to first page
+			filter.where = {recieverId : ctx.get('accessToken').userId}; // filter for the current user
+			if(read){
+				filter.where = { is_read : true}; // if only read messages are rquired
+			}
+			if(sender) {
+				filter.where = { senderId : sender}; // if messeges sent by particluar user is required
+			}
+			Message.find(filter,function(err, messages){
+				if(err){
+					callback(err);
+				}
+				else{
+					callback(null,messages);
+				}
+			});
+		};
+		Message.remoteMethod(
+			'recievedByUser', 
+			{
+				accepts: [
+					{arg: 'page', type: 'number', http: { source: 'query' } },
+					{arg: 'read', type: 'boolean', http: { source: 'query' } },
+					{arg: 'sender', type: 'number', http: { source: 'query' } }
+				],
+				returns: {arg: 'messages', type: 'array'},
+				http: {path: '/recievedByUser', verb: 'get'}
+			}
+		);
 	};
 })();

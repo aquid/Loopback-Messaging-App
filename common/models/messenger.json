@@ -17,15 +17,10 @@
   },
   "validations": [],
   "relations": {
-    "sentMessages": {
+    "reciever": {
       "type": "hasMany",
       "model": "Message",
-      "foreignKey": "senderId"
-    },
-    "recievedMessages": {
-      "type": "hasMany",
-      "model": "Message",
-      "foreignKey": "recieverId"
+      "foreignKey": ""
     }
   },
   "acls": [
@@ -53,20 +48,6 @@
       "principalType": "ROLE",
       "principalId": "admin",
       "permission": "ALLOW"
-    },
-    {
-      "accessType": "EXECUTE",
-      "principalType": "ROLE",
-      "principalId": "$authenticated",
-      "permission": "ALLOW",
-      "property": "sentMessages"
-    },
-    {
-      "accessType": "EXECUTE",
-      "principalType": "ROLE",
-      "principalId": "$authenticated",
-      "permission": "ALLOW",
-      "property": "recievedMessages"
     }
   ],
   "methods": {}
