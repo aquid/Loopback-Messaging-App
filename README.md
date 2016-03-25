@@ -15,7 +15,7 @@ for more information.
 ## Loopback Messaging App
 
 Loopback Messaging App is a simple application to understand the Strongloop node js framework. This application provides api
-for sending messages between registered users. The sender send the message in English language and reciever recievve the messages 
+for sending messages between registered users. The sender send the message in English language and reciever receives the messages 
 in Spanish language. For message translation [Iron Worker](https://www.iron.io/platform/ironworker/) is used which again uses 
 [Google Translate Api](https://translate.google.co.in/) for text conversion.
 
@@ -36,7 +36,7 @@ To send message you need to set your IRONWORKER credentials, see `IRONWORKER CON
 To connect and use any other DB connector you can specify the connector details in `server/datasource.local.js` file and use the command
 
 ```
-$ DB=connector_name node . or DB=connector_name slc run .
+$ DB=connector_name node . or DB=connector_name slc run 
 
 ```
 
@@ -55,7 +55,7 @@ $ DB=connector_name node . or DB=connector_name slc run .
 ## SAMPLE DATA
 
 You can see some initial users data which are created at app boot time for memory database at `server/boot/admin-user.js`
-Sample creates few dummy users data creates a custom user role as `admin` and makes the first user as admin for the application which has no restrictions in the applications. Note: You can change permissions according to [User Roles](https://docs.strongloop.com/display/public/LB/Defining+and+using+roles) 
+Sample creates few dummy users and creates a custom user role as `admin` and makes the first user as admin for the application which has no restrictions in the applications. Note: You can change permissions according to [User Roles](https://docs.strongloop.com/display/public/LB/Defining+and+using+roles) 
 
 
 ## IRONWORKER CONFIGURATION 
