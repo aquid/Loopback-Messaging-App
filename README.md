@@ -19,7 +19,7 @@ for sending messages between registered users. The sender send the message in En
 in Spanish language. For message translation [Iron Worker](https://www.iron.io/platform/ironworker/) is used which again uses 
 [Google Translate Api](https://translate.google.co.in/) for text conversion.
 
-** NOTE: This app doesn't show any reference for `Iron Worker Api` or `Google Translate Api` usage. To understand these you can look my [Iron Worker Project](https://github.com/aquid/Iron_worker_Translate) **
+** NOTE: This app doesn't show any reference for `Iron Worker Api` or `Google Translate Api` usage. To understand these you can look my [Iron Worker Project](https://github.com/aquid/Irow-Worker-Docker) **
 
 ### Run the application
 
