@@ -34,7 +34,6 @@ boot(app, __dirname);
 
 app.start = function() {
   // start the web server
-  console.log(process.env.HOST);
   var host = process.env.VCAP_APP_HOST || '0.0.0.0';
   var port = process.env.VCAP_APP_PORT || '3000';
   app.set('host', host);

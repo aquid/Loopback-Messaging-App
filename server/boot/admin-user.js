@@ -36,6 +36,27 @@
 			password: 'vinit',
 			createdAt: new Date(),
 		},
+		{
+			name:'Nisar Ali Khan Thaker',
+			username: 'nisar',
+			email: 'nisar.ali@gmail.com', 
+			password: 'nisar',
+			createdAt: new Date(),
+		},
+		{
+			name:'Abdul Qadir',
+			username: 'abdul',
+			email: 'qadir@gmail.com', 
+			password: 'qadir',
+			createdAt: new Date(),
+		},
+		{
+			name:'Kashif Nawaz',
+			username: 'kashif',
+			email: 'kashif.nawaz@gmail.com', 
+			password: 'kashif',
+			createdAt: new Date(),
+		},
 		];
 		Messenger.create(userData,function(err,user){
 			if(err){
