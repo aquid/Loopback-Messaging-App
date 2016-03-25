@@ -6,7 +6,7 @@
 		var Messenger = app.models.Messenger;
 		var Role = app.models.Role;
 		var RoleMapping = app.models.RoleMapping;
-		// Admin Messenger data
+		// Admin Messenger datsa
 		var userData = [
 		{
 			name:'Aquid Shahwar',
