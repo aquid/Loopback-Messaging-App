@@ -14,8 +14,8 @@ node_modules
 coverage
 *.tgz
 *.xml
-node_modules,
-iron.json,
+node_modules
+iron.json
 strong-resource/node_modules
 client
 *.yml
